@@ -24,7 +24,7 @@ Streamlit picks up everything in `pages/`.
 darwin_desk/
 ├── app.py                     # Main dashboard (hero, KPIs, chart tabs, top-bots preview)
 ├── pages/
-│   └── 1_🏆_Leaderboard.py    # Full ranked table + podium + filters
+│   └── 1_Leaderboard.py    # Full ranked table + podium + filters
 ├── utils.py                   # Shared theme/CSS, sidebar config panel, HTML components
 ├── .streamlit/config.toml     # Dark theme base colors
 └── requirements.txt
@@ -219,7 +219,7 @@ rough "how far has this clone drifted from its parent" number, shown on
 the new Bot-100 page below. All fixed in `engine/bots.py`, covered by
 new tests in `tests/test_bots.py`.
 
-## Bot-100 (`pages/2_💯_Bot-100.py`)
+## Bot-100 (`pages/2_Bot100.py`)
 
 A new page that runs a much larger population than the main
 dashboard — 168 bots (55 mutated children per archetype instead of up
@@ -263,7 +263,7 @@ steps.
 ## Wiring in the real engine (next steps)
 
 Everything that needs to be replaced is marked `mock_*` in `app.py` and
-`pages/1_🏆_Leaderboard.py`:
+`pages/1_Leaderboard.py`:
 
 - `mock_kpis`, `mock_equity_curves`, `mock_fitness_distribution`, `mock_population_tree` in `app.py`
 - `mock_leaderboard` in the Leaderboard page
